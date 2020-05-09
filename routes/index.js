@@ -15,4 +15,6 @@ router
 .get("/getDataId=:_id",getDataId)
 .get("/getDataType=:tipo",getDataType)
 
+.get("/download_cv",(req,res)=>res.download(__dirname + '/../public/Cv_Santiago_Gonzalez.pdf','Cv_Santiago_Gonzalez.pdf'))
+
 module.exports = router;

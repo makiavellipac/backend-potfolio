@@ -18,12 +18,12 @@ const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.
 
 const app = express();
 
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin: [process.env.FRONTENDPOINT]
-//   })
-// );
+app.use(
+  cors({
+    credentials: true,
+    origin: [process.env.FRONTENDPOINT]
+  })
+);
 
 
 app.use(express.static(path.join(__dirname, 'public')));
